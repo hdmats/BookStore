@@ -5,7 +5,8 @@
 
 <h2>Your Cart</h2>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">\
+    <!--Align headers to center-->
     <thead class="text-center">
         <tr>
             <th>Book</th>
@@ -15,6 +16,7 @@
         </tr>
     </thead>
 
+    <!--Align everything in the body to center-->
     <tbody class="text-center">
         @foreach(var i in Model.basket.Items)
             {
@@ -29,7 +31,9 @@
 
     <tfoot>
         <tr>
+            <!--Make Total: bold and all the way to the right next to the total amount-->
             <td class="fw-bold text-end"colspan="3">Total:</td>
+            <!--Bold the total amount-->
             <td class="text-center fw-bold"> @Model.basket.CalculateTotal().ToString("c") </td>
         </tr>
     </tfoot>
