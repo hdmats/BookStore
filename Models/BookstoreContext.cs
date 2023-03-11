@@ -20,6 +20,7 @@ namespace BookStore.Models
         }
 
         public DbSet<Book> Books { get; set; }
-
+        public DbSet<Cart> Cart { get; set; }
+        public object Carts { get; internal set; }
     }
 }
